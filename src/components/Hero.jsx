@@ -1,6 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/aronsProfile.png";
 import { motion } from "framer-motion";
+import resume from "../assets/Files/Resume.pdf";
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -42,7 +43,16 @@ const Hero = () => {
               {HERO_CONTENT}
             </motion.p>
 
-            <button className="border p-4 rounded-lg mb-5">Download Resume</button>
+            <motion.button
+              variants={container(1.2)}
+              initial="hidden"
+              animate="visible"
+              className="border p-4 rounded-lg mb-5"
+            >
+              <a href={resume} download="resume">
+                Download Resume
+              </a>
+            </motion.button>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
