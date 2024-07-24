@@ -41,6 +41,8 @@ const Hero = () => {
             >
               {HERO_CONTENT}
             </motion.p>
+
+            <button className="border p-4 rounded-lg mb-5">Download Resume</button>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
